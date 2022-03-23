@@ -1,0 +1,33 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif, opensans-regular, "Open Sans";
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.layout {
+    display: flex;
+    justify-content: center;
+    height: 85%;
+}
+
+.layout-card {
+    width: 100%;
+    margin-top: 5%;
+}
+
+@media(min-width: 400px) {
+    .layout-card {
+        width: 400px;
+        margin-top: 5%;
+    }
+}
+
+mat-card-content {
+    height: 80%;
+}

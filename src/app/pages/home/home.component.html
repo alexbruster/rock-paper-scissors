@@ -1,0 +1,28 @@
+<div class="layout">
+    <mat-card class="layout-card">
+        <mat-card-title class="home-card-title">Create new player</mat-card-title>
+
+        <mat-card-content>
+            <form #forma="ngForm"
+                  class="home-card-content"
+                  autocomplete="off" 
+                  (submit)="onSubmit()">
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Name</mat-label>
+                    <input matInput
+                           type="text"
+                           name="inputName"
+                           [(ngModel)]="name"
+                           required
+                           #inputName="ngModel">
+                </mat-form-field>
+
+                <button mat-stroked-button 
+                        color="primary"
+                        type="submit">JOIN</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
+

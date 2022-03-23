@@ -1,0 +1,53 @@
+.fa{
+    cursor:pointer;
+    font-size:4rem;
+}
+
+.game-actions {
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
+}
+
+.players {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.players h2:first-child {
+    margin-right: 15%;
+}
+
+.selected-play {
+    color: #3f51b5;
+}
+
+.bot-line {
+    display: flex;
+    align-items: center;
+}
+
+.bot-line h2:first-child {
+    margin-right: 6px;
+}
+
+.center {
+    text-align: center;
+}
+
+.m-top {
+    margin-top: 10%;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+@media(min-width: 400px) {
+    h2 {
+        font-weight: 500;
+        font-size: 1.7em;
+    }    
+}

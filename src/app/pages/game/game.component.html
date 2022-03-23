@@ -1,0 +1,36 @@
+<div class="layout">
+    <mat-card class="layout-card">
+        <mat-card-title>
+            <app-header [playerName]="name"></app-header>
+        </mat-card-title>
+    
+        <mat-card-content class="center m-top">
+            <h2 class="center">Score: {{score}}</h2>
+    
+            <div class="game-actions m-top">
+                <i class="fa fa-hand-rock-o" 
+                   (click)="onClick(0)"
+                   [ngClass]="{'selected-play':(playerChoice === 'rock')}"></i>
+                <i class="fa fa-hand-paper-o" 
+                   (click)="onClick(1)"
+                   [ngClass]="{'selected-play':(playerChoice === 'paper')}"></i>
+                <i class="fa fa-hand-scissors-o" 
+                   (click)="onClick(2)"
+                   [ngClass]="{'selected-play':(playerChoice === 'scissors')}"></i> 
+            </div>
+    
+            <div class="players m-top">
+                <h2>You: {{playerChoice}}</h2>
+                <div class="bot-line">
+                    <h2>Bot: </h2> 
+                    <h2 *ngIf="!isLoading; else loading">{{botChoice}}</h2>
+                    <ng-template #loading>
+                        <mat-spinner diameter=20></mat-spinner>
+                    </ng-template>
+                </div>         
+            </div>
+
+            <h2>{{result}}</h2>
+        </mat-card-content>    
+    </mat-card>
+</div>
